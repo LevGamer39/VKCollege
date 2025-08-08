@@ -33,12 +33,7 @@
 
         </section>
 
-        <div class="slider">
-            <button class="prev">&#10094;</button>
-            <img id="slider-img" src="{{ url_for('static', filename=slides[0]) }}" />
-            <button class="next">&#10095;</button>
-            <span class="caption">Фотографии с нашего мероприятия</span>
-        </div>
+     
 
         <section class="social">
             <h2 style="font-size: 2rem;">Ссылки на наши соц сети:</h2>
@@ -67,28 +62,6 @@
         </section>
       </div>
 
-    <script >
-        const images = [
-          {% for s in slides %}
-            "{{url_for('static', filename=s)}}",
-          {% endfor %}
-        ]; 
-        let current = 0;
-
-        const sliderImg = document.getElementById("slider-img");
-        const prevBtn = document.querySelector(".prev");
-        const nextBtn = document.querySelector(".next");
-
-        prevBtn.addEventListener("click", () => {
-            current = (current - 1 + images.length) % images.length;
-            sliderImg.src = images[current];
-        });
-
-        nextBtn.addEventListener("click", () => {
-            current = (current + 1) % images.length;
-            sliderImg.src = images[current];
-        });
-    </script>
     {% endblock body %}
 
     {% block footer %}
