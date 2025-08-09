@@ -1,12 +1,26 @@
-{% extends 'base.html' %}
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
     {% block head %}
     {{super()}}
     {% endblock %}
 </head>
 <body>
+    {% block body %}
+    {{super()}}
+    <section class="hero">
+        <h1>День открытых дверей VKCollege</h1>
+        <p>Добро пожаловать! Приходите познакомиться с нашим колледжем, преподавателями и студентами.</p>
+    </section>
+
+    <section class="gallery">
+        <h2>Фото и моменты</h2>
+        <div class="image-grid">
+            <!-- Здесь будут изображения -->
+        </div>
+    </section>
+    {% endblock body %}
+
+    {% block footer %}
+    {{super()}}
+    {% endblock footer %}
 </body>
 </html>

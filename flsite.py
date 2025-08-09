@@ -16,7 +16,9 @@ menu = [
 def index():
     return render_template("index.html", menu=menu)
 
-
+@app.route('/register')
+def register():
+    return '<h1>Страница регистрации (в разработке)</h1>'
 
 @app.errorhandler(404)
 def error_404(error): 

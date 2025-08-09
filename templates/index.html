@@ -10,13 +10,18 @@
 <body>
     {% block body %}
     {{super()}}
-    <div class="container">
-        <section class="about">
-            <h1 style="font-size: 2rem;">О нас</h1>
-            <p>Добро пожаловать в VK College</p>
+    <section class="hero">
+        <h1>День открытых дверей VKCollege</h1>
+        <p>Добро пожаловать! Приходите познакомиться с нашим колледжем, преподавателями и студентами.</p>
+        <a href="/register" class="anim-header">Регистрация</a>
+    </section>
 
-        </section>
-    </div>
+    <section class="gallery">
+        <h2>Фото и моменты</h2>
+        <div class="image-grid">
+            <!-- Здесь будут изображения -->
+        </div>
+    </section>
     {% endblock body %}
 
     {% block footer %}
