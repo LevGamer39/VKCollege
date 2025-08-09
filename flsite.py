@@ -16,9 +16,12 @@ menu = [
 def index():
     return render_template("index.html", menu=menu)
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
-    return '<h1>Страница регистрации (в разработке)</h1>'
+    if request.method == 'POST':
+        flash('Извините, но мест больше нет ')
+        return redirect(url_for('register'))
+    return render_template('register.html', title='Регистрация', menu=menu)
 
 @app.errorhandler(404)
 def error_404(error): 

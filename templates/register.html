@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <head>
     {% block head %}
     {{super()}}
@@ -6,16 +7,19 @@
 <body>
     {% block body %}
     {{super()}}
-    <section class="hero">
-        <h1>День открытых дверей VKCollege</h1>
-        <p>Добро пожаловать! Приходите познакомиться с нашим колледжем, преподавателями и студентами.</p>
-    </section>
+    <section class="register-page">
+        <h1>Регистрация на День открытых дверей</h1>
+        <p>Заполните форму ниже, чтобы попытаться зарегистрироваться.</p>
 
-    <section class="gallery">
-        <h2>Фото и моменты</h2>
-        <div class="image-grid">
-            <!-- Здесь будут изображения -->
-        </div>
+        <form method="post" class="register-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit" class="register-btn">Отправить</button>
+        </form>
     </section>
     {% endblock body %}
 
@@ -23,4 +27,4 @@
     {{super()}}
     {% endblock footer %}
 </body>
-</html>
+
