@@ -13,6 +13,7 @@
     {% endif %}
     {% endblock title%}
 
+
     {% block link %}
     <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +30,13 @@
 
     {% block body %}
 
+    {% block flash %}
+    <div class="bottom">
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash-{{cat}}"><p>{{msg}}</p></div>
+        {% endfor %}
+    </div>
+    {% endblock flash %}
 
     {% block mainmenu %}
     <div class="mainmenu">
