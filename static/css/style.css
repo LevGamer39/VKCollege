@@ -1,27 +1,24 @@
 ﻿* {
-  font-family: "Fira Sans", serif;
+  font-family: "VK Sans Display", "VK Sans Text", sans-serif;
 }
 
 html, body {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
-  overflow-x: hidden;
   width: 100vw;
   scroll-behavior: smooth;
-  overflow-x:hidden;
+  text-align: center;
+  background-color: #f8f9fb;
 }
 
 div.mainmenu {
-  position: static;
   background-color: #2C2D39;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 3rem;
-  min-width: 100vw;
+  width: 100%;
 }
 
 div.mainmenu div:not(div.mainmenu, div:first-child) {
@@ -35,28 +32,37 @@ div.mainmenu div a {
 }
 
 .register-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, #4CAF50, #45A049);
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #4CAF50, #45A049);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-    .register-btn:hover {
-        background: linear-gradient(135deg, #45A049, #3e8e41);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-    }
+.register-btn:hover {
+  background: linear-gradient(135deg, #45A049, #3e8e41);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
 .flashes {
-    list-style: none;
-    padding: 0;
-    margin: 1em 0;
-    color: red;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+  color: red;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.gallery {
+  margin-top: 30px;
 }
 
 
