@@ -1,6 +1,5 @@
 from flask import Flask, render_template, g, request, request_started, url_for, redirect, flash, session
-import os
-import datetime
+
 app = Flask("VKCollege")
 app.config.update(DEBUG=True)
 
@@ -18,15 +17,6 @@ menu = [
             "url": "/events/gallery"
         }
 ]
-
-def getSliderPaths(configFileName):
-    with open(configFileName, "r") as f:
-        ls = f.read().replace("\n", "")
-        return ls.split(",")
-
-
-
-
 
 @app.route("/")
 @app.route("/home")
