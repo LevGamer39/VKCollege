@@ -7,14 +7,6 @@ menu = [
         {
             "title": "Главная",
             "url": "/home"
-        },
-        {
-            "title": "Мероприятия",
-            "url": "/events/events"
-        },
-        {
-            "title": "Галерея",
-            "url": "/events/gallery"
         }
 ]
 
