@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block title %}
       {% if title %}
-        <title>Ruin Keepers - {{title}}</title>
+        <title>VKCollege - {{title}}</title>
       {% else %}
-        <title>Ruin Keepers</title>
+        <title>VKCollege</title>
       {% endif %}
     {% endblock title%}
 
@@ -28,13 +28,7 @@
       
  {% block body %}
 
-    {% block flash %}
-    <div class="bottom">
-      {% for cat, msg in get_flashed_messages(True) %}
-        <div class="flash-{{cat}}"><p>{{msg}}</p></div>
-      {% endfor %}
-    </div>
-    {% endblock flash %}
+
 
       {% block mainmenu %}
         <div class="mainmenu">
@@ -44,20 +38,9 @@
           </div>
         {% endfor %}
         </div>
-
-        <img src="{{url_for('static', filename='images/logo.png')}}" class="logo">
-        <label class="logoText">Хранители</label>
-        <label class="logoTextSec logoText">Руин</label>
       {% endblock mainmenu %}
 
     {% endblock body %}
-
-    {% block footer %}
-    <div class="footer">
-      <div>Ruin Keepers © 2020-2023</div>
-      <div><a class="anim-header" href="mailto:ruin.keepers@gmail.com">ruin.keepers@gmail.com</a></div>
-    </div>
-    {% endblock footer %}
 
   </body>
 </html>
