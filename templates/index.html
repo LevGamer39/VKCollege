@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>VKCollege</title>
-    <link rel="stylesheet" href="https://fonts.vk.com/vk-sans/css/vk-sans.min.css">
-</head>
-<body>
+﻿{% extends 'base.html' %}
+
+{% block head %}
+{{super()}}
+{% endblock %}
+
+{% block body %}
+{{super()}}
 <main>
 <section class="hero">
     <h1>День открытых дверей VKCollege</h1>
     <p>Добро пожаловать! Приходите познакомиться с нашим колледжем, преподавателями и студентами.</p>
     <section class="register">
-        <a class="register-btn" href="register" target="_blank">Регистрация</a>
+        <a class="register-btn" href="/register" target="_blank">Регистрация</a>
     </section>
 </section>
 
@@ -23,5 +22,8 @@
     </div>
 </section>
 </main>
-</body>
-</html>
+{% endblock body %}
+
+{% block footer %}
+{{super()}}
+{% endblock footer %}

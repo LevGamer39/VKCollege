@@ -1,12 +1,13 @@
-* {
+﻿* {
   font-family: "VK Sans Display", "VK Sans Text", sans-serif;
-  overflow: hidden;
 }
 
 html, body {
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
   width: 100vw;
+  scroll-behavior: smooth;
   text-align: center;
   background-color: #f8f9fb;
 }
@@ -20,6 +21,9 @@ div.mainmenu {
   width: 100%;
 }
 
+div.mainmenu div:not(div.mainmenu, div:first-child) {
+  padding-left: 2.5rem;
+}
 
 div.mainmenu div a {
   color: white;
@@ -60,5 +64,6 @@ div.mainmenu div a {
 .gallery {
   margin-top: 30px;
 }
+
 
 

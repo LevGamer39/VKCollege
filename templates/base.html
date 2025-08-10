@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+    {% if title %}
+    <title>VKCollege - {{title}}</title>
+    {% else %}
+    <title>VKCollege</title>
+    {% endif %}
+    {% endblock title%}
+
+    {% block link %}
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.vk.com/vk-sans/css/vk-sans.min.css">
+    <style>
+      body {
+        font-family: "VK Sans Display", "VK Sans Text", sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+    </style>
+    {% endblock link %}
+    {% endblock head %}
+</head>
+<body>
+    {% block body %}
+    {% block flash %}
+    <div class="bottom">
+        {% for cat, msg in get_flashed_messages(True) %}
+        <div class="flash-{{cat}}"><p>{{msg}}</p></div>
+        {% endfor %}
+    </div>
+    {% endblock flash %}
+
+    {% block mainmenu %}
+    <div class="mainmenu">
+        {% for m in menu %}
+        <div>
+            <a href="{{m.url}}" class="anim-header">{{m.title}}</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock mainmenu %}
+    {% endblock body %}
+</body>
+</html>
