@@ -1,0 +1,124 @@
+@import url('https://fonts.cdnfonts.com/css/vk-sans-display');
+
+/* Базовые стили */
+body {
+    font-family: "VK Sans Display", "VK Sans Text", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === ШАПКА === */
+.site-header {
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 12px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Меню */
+.main-nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #0077FF;
+}
+
+/* Кнопки */
+.btn,
+.btn-primary {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.btn-primary {
+    background: #0077FF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #005FCC;
+}
+
+/* === ГЛАВНЫЙ БЛОК === */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.main-text {
+    max-width: 550px;
+}
+
+.main-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.main-image img {
+    max-width: 200px;
+}
+
+/* === О КОЛЛЕДЖЕ === */
+.about {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+    color: #444;
+}
+
+
+
+
+

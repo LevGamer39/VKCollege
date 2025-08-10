@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+    {% if title %}
+    <title>VKCollege - {{title}}</title>
+    {% else %}
+    <title>VKCollege</title>
+    {% endif %}
+    {% endblock title%}
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.vk.com/vk-sans/css/vk-sans.min.css">
+    {% endblock head %}
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/vk_logo.svg') }}" alt="VKCollege" height="36">
+                <span>КОЛЛЕДЖ</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#">О колледже</a>
+                <a href="#">Направления обучения</a>
+                <a href="#">Личный кабинет</a>
+                <a href="#">Новости</a>
+            </nav>
+            <a href="{{ url_for('register') }}" class="btn-primary">Поступить</a>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        {% block body %}{% endblock body %}
+    </main>
+</body>
+</html>
+
+
