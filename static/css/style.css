@@ -237,3 +237,47 @@ body{
   .hero-badge{width:140px;height:140px}
   .btn-primary{padding:12px 18px;font-size:16px}
 }
+
+
+
+.technicalwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+.technicalwork-content img {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.technicalwork-content h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.technicalwork-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    background-color: #0077ff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #005fd4;
+}

@@ -10,6 +10,10 @@ app = Flask(
     static_folder=str(BASE_DIR / "static")
 )
 
+# Тех. Обслуживание
+MAINTENANCE_MODE = False # переключатель техобслуживания
+
+
 # Конфиг
 app.config.update(SECRET_KEY=web_app_secret_key, DEBUG=web_app_debug)
 
@@ -22,6 +26,21 @@ menu = [
     {"title": "Новости", "url": "/news"},
     {"title": "Поступить", "url": "/register"}
 ]
+
+
+@app.before_request
+def check_maintenance():
+    # Если включен режим техобслуживания и пользователь не на странице /maintenance
+    if MAINTENANCE_MODE:
+        # Разрешаем доступ только к странице техобслуживания и статике
+        if request.endpoint not in ('maintenance', 'static'):
+            return redirect(url_for('maintenance'))
+
+
+@app.route('/technicalwork')
+def maintenance():
+    return render_template('technicalwork.html')  # HTML с сообщением «Сайт на техобслуживании»
+
 
 # --- Маршруты ---
 @app.route("/")
