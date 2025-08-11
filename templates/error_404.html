@@ -1,19 +1,8 @@
-{% extends 'base.html' %}
-{% block head %}
-{{super()}}
-{% endblock %}
-{% block body %}
-{{super()}}
-<main>
-<div class="container">
-    <h1 style="font-size: 6rem">
-        4<img src="{{url_for('static', filename='/images/broken_heart.png')}}" style="width: 6rem;">4
-    </h1>
-    <h1>Упс, эта страница не была найдена!</h1>
-    <h3>Вы можете вернуться <a href="/home" class="accent anim">на главную</a>.</h3>
+{% extends "base.html" %}
+{% block content %}
+<div class="card" style="text-align:center;padding:48px;margin-top:24px">
+  <h1 style="font-size:36px;margin-bottom:8px">404 — Страница не найдена</h1>
+  <p class="tiny" style="margin-bottom:18px">Похоже, вы попали не туда. Вернуться на главную?</p>
+  <a class="btn-primary" href="{{ url_for('index') }}">На главную</a>
 </div>
-</main>
-{% endblock body %}
-{% block footer %}
-{{super()}}
-{% endblock footer %}
+{% endblock %}

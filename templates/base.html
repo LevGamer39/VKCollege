@@ -1,44 +1,76 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="ru">
 <head>
-    {% block head %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% block title %}
-    {% if title %}
-    <title>VKCollege - {{title}}</title>
-    {% else %}
-    <title>VKCollege</title>
-    {% endif %}
-    {% endblock title%}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% if title %}VK Колледж — {{ title }}{% else %}VK Колледж{% endif %}</title>
 
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.vk.com/vk-sans/css/vk-sans.min.css">
-    {% endblock head %}
+  <!-- Шрифт: Inter подобран близко к макету -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <!-- Шапка -->
-    <header class="site-header">
-        <div class="container header-content">
-            <div class="logo">
-                <img src="{{ url_for('static', filename='images/vk_logo.svg') }}" alt="VKCollege" height="36">
-                <span>КОЛЛЕДЖ</span>
-            </div>
-            <nav class="main-nav">
-                <a href="#">О колледже</a>
-                <a href="#">Направления обучения</a>
-                <a href="#">Личный кабинет</a>
-                <a href="#">Новости</a>
-            </nav>
-            <a href="{{ url_for('register') }}" class="btn-primary">Поступить</a>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <!-- Если есть логотип в static/images/logo.png — он покажется, иначе текст -->
+        {% set logo_path = url_for('static', filename='images/vk_colledge.png') %}
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/vk_logo.svg') }}" alt="VKCollege" height="36">
+            <span>КОЛЛЕДЖ</span>
         </div>
-    </header>
+       </div>
+	   
+	   
+		<div class="mainmenu">
+        {% for m in menu %}
+        <div>
+            <a href="{{m.url}}" class="anim-header">{{m.title}}</a>
+            </div>
+        {% endfor %}
+        </div>
 
-    <!-- Основной контент -->
-    <main class="container">
-        {% block body %}{% endblock body %}
-    </main>
+      <nav class="main-nav" aria-label="Главное меню">
+        <ul>
+          {% for item in menu %}
+            <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="{{ url_for('register') }}" class="btn-cta">Поступить</a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flashes">
+          {% for category, msg in messages %}
+            <div class="flash {{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© 20XX VK Колледж — демо</div>
+      <div class="tiny">Шуточный проект — не реальное учебное заведение</div>
+    </div>
+  </footer>
 </body>
 </html>
-
-

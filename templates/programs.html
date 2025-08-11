@@ -1,12 +1,39 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1>Направления обучения</h1>
-    <ul>
-        <li><strong>Информационные технологии</strong> — программирование, веб-разработка, анализ данных, кибербезопасность.</li>
-        <li><strong>Дизайн и мультимедиа</strong> — графический и веб-дизайн, 3D-моделирование, анимация.</li>
-        <li><strong>Маркетинг и менеджмент</strong> — digital-маркетинг, управление проектами, предпринимательство.</li>
-        <li><strong>Социальные и гуманитарные науки</strong> — журналистика, PR, психология, педагогика.</li>
-    </ul>
-</div>
+<section class="hero" style="padding:28px 48px;">
+  <div class="hero-left">
+    <h1 class="hero-title">РќР°РїСЂР°РІР»РµРЅРёСЏ РѕР±СѓС‡РµРЅРёСЏ</h1>
+    <p class="hero-sub">РљРѕСЂРѕС‚РєРёРµ РѕРїРёСЃР°РЅРёСЏ РїСЂРѕРіСЂР°РјРј вЂ” РІС‹РіР»СЏРґСЏС‚ СЃРµСЂСЊС‘Р·РЅРѕ, РЅРѕ Сѓ РЅР°СЃ РІСЃС‘ РµС‰С‘ С€СѓС‚РѕС‡РЅР°СЏ РєРѕРЅС†РµРїС†РёСЏ.</p>
+    <a class="btn-primary" href="{{ url_for('register') }}">РџРѕСЃС‚СѓРїРёС‚СЊ</a>
+  </div>
+
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-badge" style="width:220px;height:220px">
+      <svg viewBox="0 0 24 24" class="mortar-svg"><path d="M12 2 1 7l11 5 9-4.09V17h2V7L12 2zM11 13.2 3.3 9 11 5.8 18.7 10 11 13.2zM11 14.8v5.2h2v-5.2l-1-0.44-1 .44z"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="grid" style="margin-top:20px;">
+  <article class="card">
+    <h3>РРЅС‚РµСЂРЅРµС‚-РјРµРјРѕР»РѕРіРёСЏ</h3>
+    <p class="tiny">РђРЅР°Р»РёР·, РёСЃС‚РѕСЂРёСЏ Рё СЃРѕР·РґР°РЅРёРµ РјРµРјРѕРІ. РџСЂР°РєС‚РёС‡РµСЃРєРёРµ Р·Р°РґР°РЅРёСЏ: СЃРґРµР»Р°С‚СЊ РІРёСЂСѓСЃРЅС‹Р№ РїРѕСЃС‚.</p>
+    <p class="tiny"><strong>Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ:</strong> 2 РјРµСЃСЏС†Р° (РґРµРјРѕ)</p>
+    <a href="{{ url_for('register') }}" class="btn-primary" style="margin-top:12px;display:inline-block">РџРѕРґР°С‚СЊ Р·Р°СЏРІРєСѓ</a>
+  </article>
+
+  <article class="card">
+    <h3>РљРѕС„Рµ-РјРµРЅРµРґР¶РјРµРЅС‚</h3>
+    <p class="tiny">РСЃРєСѓСЃСЃС‚РІРѕ РІР°СЂРєРё Рё РїСЂРѕРґР°Р¶Рё РєРѕС„Рµ. Р›Р°Р±РѕСЂР°С‚РѕСЂРёРё: РґРёРІР°РЅ, РєСѓС…РѕРЅРЅС‹Р№ СЃС‚РѕР», РјРёРєСЂРѕРІРѕР»РЅРѕРІРєР°.</p>
+    <p class="tiny"><strong>Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ:</strong> 1 РјРµСЃСЏС† (РґРµРјРѕ)</p>
+    <a href="{{ url_for('register') }}" class="btn-primary" style="margin-top:12px;display:inline-block">РџРѕРґР°С‚СЊ Р·Р°СЏРІРєСѓ</a>
+  </article>
+
+  <article class="card">
+    <h3>РћРЅР»Р°Р№РЅ-РїР°СЂС‚С‹</h3>
+    <p class="tiny">РўРµС…РЅРѕР»РѕРіРёРё РєРѕРјС„РѕСЂС‚РЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ РёР· РїРѕСЃС‚РµР»Рё Рё СЃРѕС†РёР°Р»СЊРЅС‹С… СЃРµС‚РµР№.</p>
+    <p class="tiny"><strong>Р¤РѕСЂРјР°С‚:</strong> РіРёР±СЂРёРґ (РІРёРґРµРѕ + РјРµРјС‹)</p>
+    <a href="{{ url_for('register') }}" class="btn-primary" style="margin-top:12px;display:inline-block">РџРѕРґР°С‚СЊ Р·Р°СЏРІРєСѓ</a>
+  </article>
+</section>
 {% endblock %}

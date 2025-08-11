@@ -1,12 +1,26 @@
-﻿{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1>Новости</h1>
-    <p>Следите за новостями нашего колледжа, чтобы быть в курсе мероприятий, конкурсов и нововведений.</p>
-    <ul>
-        <li>📅 15.08.2025 — День открытых дверей.</li>
-        <li>📅 01.09.2025 — Начало нового учебного года.</li>
-        <li>📅 10.09.2025 — Запуск нового курса по разработке игр.</li>
-    </ul>
+<h1 class="section-title">Новости</h1>
+
+<div style="display:grid;gap:16px;margin-top:14px;">
+  <article class="card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+      <div>
+        <h3 style="margin:0 0 6px">10 августа — Открытие демо-портала</h3>
+        <p class="tiny" style="margin:0">Мы радостно открыли виртуальные двери: приходите онлайн за мемами и идеями.</p>
+      </div>
+      <div class="tiny" style="color:var(--muted)">10.08.2025</div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+      <div>
+        <h3 style="margin:0 0 6px">1 сентября — День знаний</h3>
+        <p class="tiny" style="margin:0">Нужно подготовить ноут и кофе — день знаний начинается с просмотра мемов.</p>
+      </div>
+      <div class="tiny" style="color:var(--muted)">01.09.2025</div>
+    </div>
+  </article>
 </div>
 {% endblock %}

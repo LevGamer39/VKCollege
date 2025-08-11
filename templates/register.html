@@ -1,26 +1,32 @@
-{% extends 'base.html' %}
-{% block head %}
-{{super()}}
-{% endblock %}
-{% block body %}
-{{super()}}
-<main>
-<section class="register-page">
-    <h1>Регистрация на День открытых дверей</h1>
-    <p>Заполните форму ниже, чтобы попытаться зарегистрироваться.</p>
-    <form method="post" class="register-form">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required>
+{% extends "base.html" %}
+{% block content %}
+<section style="margin-top:8px;">
+  <h1 class="section-title">Поступить</h1>
+  <div style="display:grid;grid-template-columns:1fr 420px;gap:18px;margin-top:12px;">
+    <div>
+      <div class="card">
+        <h4>Онлайн-заявка</h4>
+        <form method="post" class="form">
+          <input name="name" placeholder="ФИО" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <select name="program" required>
+            <option value="">Выберите направление</option>
+            <option>Интернет-мемология</option>
+            <option>Кофе-менеджмент</option>
+            <option>Онлайн-парты</option>
+          </select>
+          <textarea name="note" placeholder="Коротко - почему хотите учиться? (шутки приветствуются)"></textarea>
+          <button class="btn-primary" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <button type="submit" class="register-btn">Отправить</button>
-    </form>
+    <div>
+      <div class="card">
+        <h4>Что дальше?</h4>
+        <p class="tiny">Мы получим заявку и покажем уведомление (в демо: флэш-сообщение). Реальной коммуникации нет — это демонстрационный сайт.</p>
+      </div>
+    </div>
+  </div>
 </section>
-</main>
-{% endblock body %}
-{% block footer %}
-{{super()}}
-{% endblock footer %}
-
+{% endblock %}
