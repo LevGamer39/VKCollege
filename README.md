@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="ВК Колледж" width="450"/>
+  <img src="static/images/vk_colledge.png" alt="ВК Колледж" width="450"/>
 </p>
 
 <h1 align="center">🎓✨ ВК Колледж — заочное IT-образование онлайн</h1>
