@@ -1,3 +1,5 @@
+Разработка приостановлена
+
 <p align="center">
   <img src="static/images/vk_colledge.png" alt="ВК Колледж" width="450"/>
 </p>
